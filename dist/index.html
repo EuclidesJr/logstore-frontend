@@ -3,9 +3,49 @@
   <head>
     <meta charset="utf-8" />
     <title>Logstore</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
   </head>
   <body>
+    <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-top">
+          Logstore
+        </a>
+      </div>
+    </nav>
+    <div class="container mt-3">
+      <div class="row">
+        <div class="card">
+          <h5 class="card-header">Lista de Logs</h5>
+          <div id="new-log-dialog" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title ">Novo Log</h4>
+                </div>
+                <div class="modal-body">
+                  <span>Campos</span>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger pull-left" data-dismiss="modal">Cancelar</button>
+                  <button type="button" class="btn btn-primary" >Salvar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <table 
+              class="table" 
+              id="table"
+              data-show-pagination-switch="false"
+              data-pagination="true"
+              data-page-list="[10, 25, 50, 100, all]"
+              data-show-footer="true"></table>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="main.js"></script>
-    <div>Teste</div>
   </body>
 </html>
