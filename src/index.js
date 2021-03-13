@@ -1,5 +1,7 @@
 import _ from 'lodash';
 import $ from "jquery";
+import jqueryValidation from 'jquery-validation';
+
 import Popper from 'popper.js';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -15,7 +17,6 @@ const logstoreService = new LogstoreService();
 
 $(function() {
   logstoreService.getAll(successCallback => {
-    console.log(successCallback);
     $('#table').bootstrapTable({
       search: true,
       showColumns: false,
@@ -55,3 +56,27 @@ $(function() {
     console.log(errorCallback);
   });
 });
+
+$('#bnt-cancel').on('click', function(e){
+  $('#new-log-dialog').modal('hide');
+  $('#content').val('');
+  $('#occurrences').val('');
+});
+
+$('#logForm').on('submit', function(e){
+  e.preventDefault();
+  console.log("error, result");
+  const data = {
+    'content': $('#content').val(),
+    'occurrences': $('#occurrences').val()
+  }
+  logstoreService.save(data, successCallback => {
+    console.log(successCallback);
+    $('#new-log-dialog').modal('hide');
+    $('#content').val('');
+    $('#occurrences').val('');
+  },
+  errorCallback => {
+    console.log(errorCallback);
+  });
+})

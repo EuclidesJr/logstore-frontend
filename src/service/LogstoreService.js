@@ -10,4 +10,21 @@ export default class LogstoreService {
         errorCallback( error );
       });
   }
+
+  save(log, successCallback, errorCallback) {
+    $.post({
+      url: `${RESOURCE_NAME}/log`,
+      data: JSON.stringify(log),
+      crossDomain: true,
+      contentType: 'application/json',
+    })
+    .done(function( data ) {
+      console.log(data);
+      successCallback( data );
+    })
+    .fail(function(error) {
+      console.log(error);
+      errorCallback( error );
+    });
+  }
 }

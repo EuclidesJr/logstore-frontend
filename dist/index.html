@@ -24,13 +24,38 @@
                 <div class="modal-header">
                   <h4 class="modal-title ">Novo Log</h4>
                 </div>
-                <div class="modal-body">
-                  <span>Campos</span>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-danger pull-left" data-dismiss="modal">Cancelar</button>
-                  <button type="button" class="btn btn-primary" >Salvar</button>
-                </div>
+                <form id="logForm">
+                  <div class="modal-body">      
+                    <div class="mb-3">
+                      <label for="content" class="form-label">Conteúdo</label>
+                      <input 
+                        type="text" 
+                        class="form-control" 
+                        id="content" 
+                        aria-describedby="contentHelp" 
+                        required
+                        oninvalid="this.setCustomValidity('Campo obrigatório')"
+                        oninput="this.setCustomValidity('')">
+                      <div id="contentHelp" class="form-text">Texto descritivo da ocorrência.</div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="occurrences" class="form-label">Ocorrência</label>
+                      <input 
+                        type="number"
+                        class="form-control" 
+                        id="occurrences" 
+                        aria-describedby="occurrencesHelp" 
+                        required 
+                        oninvalid="this.setCustomValidity('Campo obrigatório')"
+                        oninput="this.setCustomValidity('')">
+                      <div id="occurrencesHelp" class="form-text">Quantidade de ocorrências.</div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-danger pull-left" id="bnt-cancel" data-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary" id="btn-save">Salvar</button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
@@ -40,6 +65,7 @@
               id="table"
               data-show-pagination-switch="false"
               data-pagination="true"
+              data-page-size="10"
               data-page-list="[10, 25, 50, 100, all]"
               data-show-footer="true"></table>
           </div>
