@@ -45,7 +45,7 @@ npm start
 
 Euclides Cardoso Júnior - euclides.c.jr@gmail.com
 
-Link do projeto: https://github.com/EuclidesJr/logstore-frontend+
+Link do projeto: https://github.com/EuclidesJr/logstore-frontend
 
 ## Licença
 
