@@ -27,4 +27,17 @@ export default class LogstoreService {
       errorCallback( error );
     });
   }
+
+  delete(id, successCallback, errorCallback) {
+    $.ajax({
+      url: `${RESOURCE_NAME}/log/${id}`, 
+      type: 'DELETE',
+    })
+    .done(function( data ) {
+      successCallback( data );
+    })
+    .fail(function(error) {
+      errorCallback( error );
+    });
+  }
 }
