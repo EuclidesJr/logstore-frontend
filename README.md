@@ -39,7 +39,7 @@ npm install
 npm start
 ```
 
-5. Por padrão a aplicação irá iniciar automáticamente na porta 3000.
+5. Por padrão a aplicação irá iniciar automaticamente na porta 3000.
 
 ## Contato
 
