@@ -1,6 +1,6 @@
 # logstorage
 
-[![GitHub issues](https://img.shields.io/github/issues/EuclidesJr/logstore-frontend)](https://github.com/EuclidesJr/logstore-frontend/issues) [![GitHub forks](https://img.shields.io/github/forks/EuclidesJr/logstore-frontend)](https://github.com/EuclidesJr/logstore-frontend/forks) [![GitHub forks](https://img.shields.io/github/stars/EuclidesJr/logstore-frontend)](https://github.com/EuclidesJr/logstore-frontend/stars) [![GitHub license](https://img.shields.io/github/license/EuclidesJr/logstore-frontend)](https://github.com/EuclidesJr/logstore-frontend)
+[![GitHub issues](https://img.shields.io/github/issues/EuclidesJr/logstore-frontend)](https://github.com/EuclidesJr/logstore-frontend/issues) [![GitHub forks](https://img.shields.io/github/forks/EuclidesJr/logstore-frontend)](https://github.com/EuclidesJr/logstore-frontend/forks) [![GitHub forks](https://img.shields.io/github/stars/EuclidesJr/logstore-frontend)](https://github.com/EuclidesJr/logstore-frontend/stars) [![GitHub license](https://img.shields.io/github/license/EuclidesJr/logstore-frontend?label=Licen%C3%A7a)](https://github.com/EuclidesJr/logstore-frontend)
 
 Aplicação para logs
 
