@@ -15,13 +15,14 @@ import toastr from 'toastr';
 import 'toastr/build/toastr.min.css';
 
 import logoImage from './assets/cingo-logo.png';
+import faviocon from './assets/cropped-Favicon.png';
 
 const logstoreService = new LogstoreService();
 
 function operateFormatter(value, row, index) {
   return [
-    '<a class="btn btn-secondary remove" href="javascript:void(0)" title="Remover">',
-    '<i class="fa fa-trash">Remover</i>',
+    '<a class="btn btn-secondary remove" style="text-decoration:none" href="javascript:void(0)" title="Remover">',
+    'Remover',
     '</a>'
   ].join('')
 }
@@ -83,7 +84,6 @@ function initTable(data) {
 }
 
 function init() {
-  $("img").prop("src", logoImage);
   logstoreService.getAll(successCallback => {
     initTable(successCallback);
   },
@@ -99,6 +99,8 @@ function clearModal() {
 }
 
 $(function() {
+  $("img").prop("src", logoImage);
+  $("#favicon-link").prop("href", faviocon);
   init();
 });
 
